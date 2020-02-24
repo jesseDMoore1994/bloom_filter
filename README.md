@@ -8,7 +8,10 @@ First, make sure the current working directory is at the root of the dirctory. (
 From the root of the project, execute the following commands.
 
 ```
-take build
+export CC=gcc
+export CXX=g++
+mkdir build
+cd build
 cmake .. -G "Unix Makefiles"
 make
 ```
