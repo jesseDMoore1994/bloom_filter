@@ -2,7 +2,7 @@
 
 ## How to build the project
 
-First, make sure the current working directory is at the root of the dirctory. (This README is at
+First, make sure the current working directory is at the root of the project. (This README is at
  the project root)
 
 From the root of the project, execute the following commands.
@@ -20,7 +20,7 @@ This generates the source binaries at the following location from the project ro
 
 ## How to run the project
 
-First, make sure the project has been built using the project above.
+First, make sure the project has been built using the steps above.
 
 From the root of the project, navigate to the built binaries.
 
