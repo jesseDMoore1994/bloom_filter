@@ -24,12 +24,28 @@ SCENARIO( "dicReader filename operations.", "[dicReader]" ) {
     backup_cout = std::cout.rdbuf(fake_cout.rdbuf());
 
     GIVEN( "a dicReader initialized with a filename" ) {
-        dicReader dr = dicReader("tests/example_dictionary.txt");
+        dicReader dr = dicReader("tests/clean_dictionary.txt");
 
-        WHEN( "the dirty file is read" ) {
+        WHEN( "the clean file is read" ) {
             std::vector<std::string> ret_lines = dr.getDictLines(); 
 
-            THEN( "std out has a warning message" ) {
+            THEN( "std out is empty" ) {
+                REQUIRE( fake_cout.str() == "");
+            }
+
+            AND_THEN( "the lines read are the cleaned as expected" ) {
+                REQUIRE( ret_lines == example_dictionary_lines );
+            }
+        }
+    }
+
+    GIVEN( "a dicReader initialized with a filename" ) {
+        dicReader dr = dicReader("tests/dirty_dictionary.txt");
+
+        WHEN( "the dirty file is read" ) {
+            std::vector<std::string> ret_lines = dr.getDictLines();
+
+            THEN( "std out is empty" ) {
                 REQUIRE( fake_cout.str() == "Detected at least one dirty string, input was cleaned.\n");
             }
 
@@ -39,14 +55,3 @@ SCENARIO( "dicReader filename operations.", "[dicReader]" ) {
         }
     }
 }
-
-//SCENARIO( "Bloom filter operations.", "[bloomFilter]" ) {
-//
-//    GIVEN( "a bloomFilter" ) {
-//        dicReader dr = dicReader();
-//        
-//        THEN( "it hashes the input dictionary" ) {
-//            REQUIRE( dr.getFilename() == "" );
-//        }
-//    }
-//}
