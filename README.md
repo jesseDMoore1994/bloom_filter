@@ -4,12 +4,16 @@ I have tested this project and confirmed that it works on the CS linux lab machi
  following dependency versions.
 
  gcc 8.1.0
+
  g++ 8.1.0
+ 
  cmake 3.5.1
 
-Project source files are located in the directory labeled `src`
-Project tests are located in the directory labeled `tests`
-Project external dependencies are in `external`
+Project source files are located in the directory labeled `src`.
+
+Project tests are located in the directory labeled `tests`.
+
+Project external dependencies are in `external`.
 
 ## How to build the project
 
@@ -40,8 +44,9 @@ cd ./build/src
 ```
 
 Place the dictionary file that you want to use in this directory with the name "dictionary.txt"
+
 NOTE: DICTIONARY FILE MUST BE NAMED "dictionary.txt" AND MUST BE IN THE DIRECTORY LISTED ABOVE 
-  RELATIVE TO PROJECT ROOT
+  RELATIVE TO PROJECT ROOT.
 
 Once you have placed the dictionary in the directory, execute the program by running the following
  command:
