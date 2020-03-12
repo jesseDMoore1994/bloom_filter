@@ -7,6 +7,10 @@ I have tested this project and confirmed that it works on the CS linux lab machi
  g++ 8.1.0
  cmake 3.5.1
 
+Project source files are located in the directory labeled `src`
+Project tests are located in the directory labeled `tests`
+Project external dependencies are in `external`
+
 ## How to build the project
 
 First, make sure the current working directory is at the root of the project. (This README is at
