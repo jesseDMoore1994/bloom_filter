@@ -1,5 +1,12 @@
 # Bloom filter password checker.
 
+I have tested this project and confirmed that it works on the CS linux lab machines with the 
+ following dependency versions.
+
+ gcc 8.1.0
+ g++ 8.1.0
+ cmake 3.5.1
+
 ## How to build the project
 
 First, make sure the current working directory is at the root of the project. (This README is at
@@ -33,7 +40,7 @@ NOTE: DICTIONARY FILE MUST BE NAMED "dictionary.txt" AND MUST BE IN THE DIRECTOR
   RELATIVE TO PROJECT ROOT
 
 Once you have placed the dictionary in the directory, execute the program by running the following
- command
+ command:
 
 ```
 ./bloom_filter
